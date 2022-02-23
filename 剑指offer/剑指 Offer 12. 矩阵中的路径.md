@@ -1,6 +1,11 @@
-#include<vector>
-#include<string>
-using namespace std;
+# 剑指 Offer 12. 矩阵中的路径
+[剑指 Offer 12. 矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/)
+## 思路
+dfs+剪枝
+
+
+## 代码
+```cpp
 class Solution {
 public:
     bool exist(vector<vector<char>>& board, string word) {
@@ -27,3 +32,4 @@ private:
         return res;
     }
 };
+```
