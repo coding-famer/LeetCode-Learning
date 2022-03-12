@@ -2,7 +2,7 @@
 [剑指 Offer 12. 矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 ## 思路
 dfs+剪枝
-
+在搜索过一个节点后，将它改为`' ' `空格，在退回到这个节点时再将字符填回去。
 
 ## 代码
 ```cpp
