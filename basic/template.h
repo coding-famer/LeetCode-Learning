@@ -1,7 +1,21 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
+//-------------------链表--------------------------
+struct ListNode
+{
+    ListNode* next;
+    int val;
+    ListNode(int v):val(v),next(NULL){}
+};
+//--------------------二叉树---------------------------
+struct TreeNode
+{
+    TreeNode* left;
+    TreeNode* right;
+    int val;
+    TreeNode(int v):val(v),left(NULL),right(NULL){}
+};
 //--------------------二分查找--------------------------------
 int binaryseach(vector<int>& nums, int target)
 {
@@ -49,17 +63,25 @@ void quicksort(vector<int>& nums)
 
 //------------------归并排序---------------------
 
-void merge(vector<int>& nums,int l,int h)
+void merge(vector<int>& nums,vector<int>& tmp,int l,int h)
 {
     if(l>=h) return;
     int p=l+(h-l)/2;
-    merge(nums,l,p);
-    merge(nums,p+1,h);
-    vector<int> tmp;
-    int
+    merge(nums,tmp,l,p);
+    merge(nums,tmp,p+1,h);
+    int k=l,i=l,j=p+1;
+    while(i<=p&&j<=h)
+        tmp[k++]=(nums[i]<nums[j]?nums[i++]:nums[j++]);
+    while(i<=p)
+        tmp[k++]=nums[i++];
+    while(j<=h)
+        tmp[k++]=nums[j++];
+    for(int x=l;x<=h;x++)
+        nums[x]=tmp[x];
 }
 
 void mergesort(vector<int>& nums)
 {
-    
+    vector<int> tmp(nums.size());
+    merge(nums,tmp,0,nums.size()-1);
 }
