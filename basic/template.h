@@ -86,3 +86,14 @@ void mergesort(vector<int>& nums)
     merge(nums,tmp,0,nums.size()-1);
 }
 //----------------------反转链表------------------
+ListNode* reverseList(ListNode* head) {
+    ListNode* p=NULL;
+    ListNode* q=head;
+    while(q)
+    {
+        ListNode* k=q->next;
+        q->next=p;
+        p=q;q=k;
+    }
+    return p;
+}

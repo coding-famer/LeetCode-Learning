@@ -11,12 +11,12 @@ public:
         unordered_map<int,int> h;
         for(int i=0;i<nums.size();i++) 
         {
-            auto it =h.find(nums[i]);
+            auto it =h.find(target-nums[i]);
             if(it!=h.end())
             {
                 return {it->second,i};
             }
-            h[target-nums[i]]=i;
+            h[nums[i]]=i;
         }
         return {};
     }
