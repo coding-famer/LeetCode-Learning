@@ -7,8 +7,11 @@
 ## 分治算法
 
 ## 数组
-26. 删除有序数组中的重复项
-122. 买卖股票的最佳时机 II
+[1.两数之和](https://github.com/coding-famer/LeetCode-Learning/blob/master/Notes/1.两数之和.md)
+
+[26.删除有序数组中的重复项](https://github.com/coding-famer/LeetCode-Learning/blob/master/Notes/26.删除有序数组中的重复项.md)
+
+[122.买卖股票的最佳时机 II](https://github.com/coding-famer/LeetCode-Learning/blob/master/Notes/122.买卖股票的最佳时机%20II.md)
 ## 字符串
 
 ## 堆、栈、队列

@@ -1,10 +1,3 @@
-// @before-stub-for-debug-begin
-#include <vector>
-#include <string>
-#include "commoncppproblem26.h"
-
-using namespace std;
-// @before-stub-for-debug-end
 
 /*
  * @lc app=leetcode.cn id=26 lang=cpp
@@ -16,16 +9,12 @@ using namespace std;
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        int i = 0,j=0;
-        int len = nums.size();
-        if (len==0)
-        return 0;
-        while(j<len)
+        int n=nums.size();
+        int i=0,j=0;
+        while(j<n)
         {
-            if(nums[i]==nums[j])
-                j++;
-            else
-                nums[++i]=nums[j++];
+            if(nums[j]==nums[i]) j++;
+            else nums[++i]=nums[j++];
         }
         return i+1;
     }
