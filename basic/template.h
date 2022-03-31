@@ -20,7 +20,7 @@ struct TreeNode
 int binaryseach(vector<int>& nums, int target)
 {
     int l = 0, r = nums.size();
-    while (l <= r)
+    while (l < r)
     {
         int m = l + (r - l) / 2;
         if (nums[m] == target)
@@ -30,7 +30,7 @@ int binaryseach(vector<int>& nums, int target)
         else
             l = m + 1;
     }
-    return -1;
+    return l;
 }
 //-----------------------------------------------------------
 
