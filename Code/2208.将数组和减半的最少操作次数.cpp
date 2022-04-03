@@ -1,6 +1,10 @@
-#include<vector>
-#include<queue>
-using namespace std;
+/*
+ * @lc app=leetcode.cn id=2208 lang=cpp
+ *
+ * [2208] 将数组和减半的最少操作次数
+ */
+
+// @lc code=start
 class Solution {
 public:
     int halveArray(vector<int>& nums) {
@@ -24,3 +28,5 @@ public:
         return count;
     }
 };
+// @lc code=end
+

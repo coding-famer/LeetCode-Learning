@@ -1,6 +1,10 @@
-#include<vector>
-#include<string>
-using namespace std;
+/*
+ * @lc app=leetcode.cn id=2207 lang=cpp
+ *
+ * [2207] 字符串中最多数目的子字符串
+ */
+
+// @lc code=start
 class Solution {
 public:
     long long maximumSubsequenceCount(string s, string pattern) {
@@ -25,3 +29,5 @@ public:
         return h+max(f,l);
     }
 };
+// @lc code=end
+
